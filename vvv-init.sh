@@ -1,11 +1,11 @@
-# Init script for VVV Auto Bootstrap Demo 1
+# Init script for MVMEM
 
-echo "Commencing VVV Demo 1 Setup"
+echo "Commencing MVMEM Setup"
 
 # Make a database, if we don't already have one
 echo "Creating database (if it's not already there)"
-mysql -u root --password=root -e "CREATE DATABASE IF NOT EXISTS vvv_demo_1"
-mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON vvv_demo_1.* TO wp@localhost IDENTIFIED BY 'wp';"
+mysql -u root --password=root -e "CREATE DATABASE IF NOT EXISTS mvmem"
+mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON mvmem.* TO wp@localhost IDENTIFIED BY 'wp';"
 
 # Download WordPress
 if [ ! -d htdocs ]
@@ -14,11 +14,11 @@ then
 	mkdir htdocs
 	cd htdocs
 	wp core download 
-	wp core config --dbname="vvv_demo_1" --dbuser=wp --dbpass=wp --dbhost="localhost"
-	wp core install --url=vvv-demo-1.dev --title="VVV Bootstrap Demo 1" --admin_user=admin --admin_password=password --admin_email=demo@example.com
+	wp core config --dbname="mvmem" --dbuser=wp --dbpass=wp --dbhost="localhost"
+	wp core install --url=mvmem.dev --title="MVMEM Local" --admin_user=admin --admin_password=password --admin_email=matt@antym.com
 	cd ..
 fi
 
 # The Vagrant site setup script will restart Nginx for us
 
-echo "VVV Demo 1 site now installed";
+echo "MVMEM Local site now installed";
