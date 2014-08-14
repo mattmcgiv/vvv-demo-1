@@ -1,6 +1,6 @@
 # VVV Auto Bootstrap Demo 1
 
-This is one of a series of demonstrations of the auto-sitesetup designed to be used with [Varying Vagrants Vagrant](https://github.com/10up/varying-vagrant-vagrants/).
+This is one of a series of demonstrations of the auto-sitesetup designed to be used with [Varying Vagrant Vagrants](https://github.com/10up/varying-vagrant-vagrants/).
 
 This demo shows a site setup using just WP CLI and MySQL commands.
 
